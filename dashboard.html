@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Payment System</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="grid">
+
+    <!-- LEFT PANEL -->
+    <div class="panel">
+        <h2>QRIS Payment</h2>
+
+        <div class="qr">
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=EXTREMEPAY">
+        </div>
+
+        <div class="info">
+            <p>ID Transaksi: <b id="trx"></b></p>
+            <p>Status: <span id="status" class="waiting">Waiting</span></p>
+        </div>
+
+        <div class="progress-wrap">
+            <div id="bar"></div>
+        </div>
+
+    </div>
+
+    <!-- RIGHT PANEL -->
+    <div class="panel">
+
+        <h2>Live Support</h2>
+
+        <div id="chat" class="chat"></div>
+
+        <div class="chat-input">
+            <input id="msg" placeholder="Ketik pesan...">
+            <button onclick="send()">➤</button>
+        </div>
+
+        <div class="invoice">
+            <h3>Invoice</h3>
+            <p>Item: Premium Service</p>
+            <p>Total: Rp 50.000</p>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
